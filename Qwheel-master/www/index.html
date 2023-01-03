@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<!--
+Qwheel: Question Wheel (https://github.com/mitotic/Qwheel)
+The MIT License (MIT)
+Copyright (c) 2016-2018 Ramalingam Saravanan <sarava@sarava.net>
+-->
+
+<!--
+Action parameters
+?clear=1:   Delete current session
+?reset=1:   Delete current session and reload page (creating new session)
+?restart=1: Restart session (restoring all dropped names)
+?stats=1:   Display stats https://code.jquery.com/jquery-1.11.3.min.js
+-->
+<head>
+   <title>RTC</title>
+   <link rel="shortcut icon" type="image/png" href="../www/img/RtcIcon.ico"/>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/jquery.ui.css">
+
+
+</head>
+<body>
+  
+
+  
+     <!-- Backgroud câu đối -->
+     <a class="luta-tet-left" ><img width="100%" src="../www/img/cau-duoc-uoc-thay-xuan-nhu-y-trai-2.png"/></a>
+     <a class="luta-tet-right" ><img width="100%" src="../www/img/cau-duoc-uoc-thay-xuan-nhu-y-phai-2.png"/></a>
+  
+     <div id="dialog-confirm" >
+      <!-- <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span></p> -->
+    </div>
+  
+<div class="row">
+  
+   <div class="col-md-12 d-flex justify-content-center  align-items-center">  
+      <!-- <h3 id="sessiontitle"></h3>
+     
+      <h3><em id="sessionrange"></em>
+      </h3> -->
+
+      <!-- <canvas id="phaohoa"></canvas> -->
+      <canvas id="canvas" style="z-index: 800;" width="990" height="990"></canvas>
+      <div id="textgg"></div>
+      <canvas id="phaohoa" width="900" height="900"style="position: absolute; z-index: 700;"></canvas>
+       <!-- Pháo hoa-->
+      
+      <pre id="pretext"></pre>
+     </div>
+   <div class="col-md-12 d-flex justify-content-end  align-items-end ">
+      
+      <div class="row mt-2 ">
+       
+         <div class="col-5"> <select class="form-select"aria-label="Default select example" id="stateSelect">
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         </div>
+         <div class="col-3"><a class="btn btn-primary" href="#" onclick="Qwheel.session.wheelRestart();">Restart</a>&nbsp;&nbsp;&nbsp;</div>
+      <div class="col-2"><a class="btn btn-danger"  href="#" onclick="Qwheel.session.wheelClear();">Delete</a>&nbsp;&nbsp;&nbsp;</div>
+      <!-- <div class="col-2"> <a class="btn btn-secondary" href="#" onclick="Qwheel.session.wheelExport();">Export</a>&nbsp;&nbsp;&nbsp;</div> -->
+      <!-- <button onclick=" return appendTXT()">Save Text file</button> -->
+         <div class="col-3 text-white"> (<b id="sessioncount"></b>)</div>
+      </div>
+
+   </div>
+   
+  
+   <div id="popup-overlay"></div>
+
+      <div id="popup-container" class="popup-container">
+         <!--
+         <div class="popup-controls">
+            <span id="popup-close" class="popup-close">X</span>
+         </div>
+         -->
+         Nhập danh sách tên, mỗi tên một dòng: <button class="btn btn-success  btn-sm" id="render-number">Render data number</button>
+         &nbsp;&nbsp;&nbsp;&nbsp; 
+         <textarea id="popup-content" class="popup-content" name="textarea" rows="12">
+1
+2
+3
+4
+5
+         </textarea>
+         <button id="popup-submit" class="btn btn-primary popup-submit">Submit</button>
+
+      </div>
+
+   
+
+   </div>
+  
+
+   <!-- backgroud hoa anh đào -->
+   <div class="f1-effect">
+	
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+   </div>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="jquery-ui.min.js"></script>
+   <script type="text/javascript" src="js/rouletteWheel.js"></script>
+   <script type="text/javascript" src="js/custom.js"></script>
+  
+   <script type="text/javascript" src="./js/phaohoa.js"> </script>
+
+   
+</body>
+</html>

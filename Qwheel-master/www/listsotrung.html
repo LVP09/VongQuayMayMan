@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<!--
+Qwheel: Question Wheel (https://github.com/mitotic/Qwheel)
+The MIT License (MIT)
+Copyright (c) 2016-2018 Ramalingam Saravanan <sarava@sarava.net>
+-->
+
+<!--
+Action parameters
+?clear=1:   Delete current session
+?reset=1:   Delete current session and reload page (creating new session)
+?restart=1: Restart session (restoring all dropped names)
+?stats=1:   Display stats https://code.jquery.com/jquery-1.11.3.min.js
+-->
+<head>
+   <title>RTC</title>
+   <link rel="shortcut icon" type="image/png" href="../www/img/RtcIcon.ico"/>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/jquery.ui.css">
+
+
+</head>
+<body>
+<h1 class=" text-white">Danh sách những số vừa quay được</h1>
+<div class="form-group">
+    
+    <textarea class="form-control" id="listsotrung" rows="3" style="width:800px; height:600px"></textarea>
+  </div>
+
+   <!-- backgroud hoa anh đào -->
+   <div class="f1-effect">
+	
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+      <div class="f1-effect-flower">
+      </div>
+      
+   </div>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="jquery-ui.min.js"></script>
+   <script type="text/javascript" src="js/rouletteWheel.js"></script>
+   <script type="text/javascript" src="js/custom.js"></script>
+  
+   <script type="text/javascript" src="./js/phaohoa.js"> </script>
+   <script type="text/javascript"> 
+        // Shorthand for $( document ).ready()
+        $(function() {
+            function getObject(key) {
+            try {
+                return JSON.parse(localStorage[key]);
+            } catch(err) {
+                return null;
+            }}
+            var listsotrung = getObject("listsotrung");
+            $("#listsotrung").text(listsotrung);
+        });
+    </script>
+
+   
+</body>
+</html>
